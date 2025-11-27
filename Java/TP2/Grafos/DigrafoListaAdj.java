@@ -3,13 +3,12 @@ package TP2.Grafos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrafoListaAdj implements Grafo{
+public class DigrafoListaAdj implements Grafo{
     public int vertices;
     public int arestas;
     public List<List<Aresta>> adj;
 
-    //construtor
-    public GrafoListaAdj(int vertices){
+    public DigrafoListaAdj(int vertices){
         this.vertices = vertices;
         this.arestas = 0;
         this.adj = new ArrayList<>();
@@ -33,12 +32,6 @@ public class GrafoListaAdj implements Grafo{
         adj.get(origem).add(new Aresta(destino, peso));
 
         this.arestas++;
-    }
-
-    //adiciona aresta nao direcionada
-    public void addArestasNaoDirecionadas (int origem, int destino, int peso){
-        addAresta(origem, destino, peso);
-        addAresta(destino, origem, peso);
     }
 
     //retorna os vizinhos do vertice
@@ -66,14 +59,14 @@ public class GrafoListaAdj implements Grafo{
 
     public boolean ehOrientado(){
 
-        return false; //grafo nao orientado
+        return true; // orientado
     }
 
     public void imprime(){
-        System.out.println("LISTA DE ADJACENCIA (Grafo nao orientado)\n");
+        System.out.println("LISTA DE ADJACENCIA (Digrafo orientado)\n");
 
         for(int x=0; x<vertices; x++){
-            System.out.print(x + " -- ");
+            System.out.print(x + " -> ");
 
             for(Aresta aresta : adj.get(x)){
                 System.out.print(aresta + "\t");

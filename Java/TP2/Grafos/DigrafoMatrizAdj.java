@@ -3,12 +3,12 @@ package TP2.Grafos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrafoMatrizAdj implements Grafo {
+public class DigrafoMatrizAdj implements Grafo{
     public int vertices;
     public int arestas;
     public int [][] matriz;
 
-    public GrafoMatrizAdj(int vertices){
+    public DigrafoMatrizAdj(int vertices){
         this.vertices = vertices;
         this.arestas = 0;
         this.matriz = new int[vertices][vertices];
@@ -35,13 +35,6 @@ public class GrafoMatrizAdj implements Grafo {
         this.arestas++;
     }
 
-    public void addArestaNaoDirecionada(int origem, int destino, int peso){
-        this.matriz[origem][destino] = peso;
-        this.matriz[destino][origem] = peso;
-
-        this.arestas = this.arestas + 2;
-    }
-
     public List<Integer> vizinhos(int origem){
         List<Integer> lista = new ArrayList<>();
 
@@ -60,11 +53,11 @@ public class GrafoMatrizAdj implements Grafo {
     }
 
     public boolean ehOrientado(){
-        return false; //nao orientado
+        return true; //orientado
     }
 
     public void imprime() {
-        System.out.println("MATRIZ DE ADJACÊNCIA (Grafo não orientado)\n");
+        System.out.println("MATRIZ DE ADJACÊNCIA (Digrafo orientado)\n");
 
         for(int x=0; x<vertices; x++){
             for(int y=0; y<vertices; y++){
