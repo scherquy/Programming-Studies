@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "a614577010f843ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec19eb294e9f096b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "59cee811a962a604",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "VHDL/ANOTAÇÕES/5 - ARQUITETURA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5 - ARQUITETURA"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bba17e8b26c6f0a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b55a3e54fb1941f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db0e4699acaff59f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "bc5eeeddd3b8f294",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "f939f0ccd863be73",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 210.5
+  },
+  "right": {
+    "id": "c8e69d31c088333d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1d4f742e00f9dd5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "914e7ed30dcfb698",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "JAVA/ANOTAÇÕES EM JAVA.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para ANOTAÇÕES EM JAVA"
+            }
+          },
+          {
+            "id": "a8afe8f32e3f8a63",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ANOTAÇÕES EM C.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para ANOTAÇÕES EM C"
+            }
+          },
+          {
+            "id": "c45995da9dbff93d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9a887d70fcd863fd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "JAVA/ANOTAÇÕES EM JAVA.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de ANOTAÇÕES EM JAVA"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Criar nova base": false,
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "59cee811a962a604",
+  "lastOpenFiles": [
+    "VHDL/ANOTAÇÕES/4 - DEFINIÇÃO DE ENTRADAS E SAÍDAS.md",
+    "VHDL/ANOTAÇÕES/3 - OPERADORES EM VHDL.md",
+    "VHDL/ANOTAÇÕES/2 - BIBLIOTECAS.md",
+    "VHDL/ANOTAÇÕES/1 - ENTRADAS E SAÍDAS.md",
+    "VHDL/ANOTAÇÕES/0 - TIPOS DE DADOS.md",
+    "VHDL/ANOTAÇÕES/17 -.md",
+    "C/ANOTAÇÕES/1 - SWITCH CASE.md",
+    "C/ANOTAÇÕES.md",
+    "C/ANOTAÇÕES/2 - FOR.md",
+    "C/ANOTAÇÕES/0 - TIPOS DE OPERADORES.md",
+    "C/ANOTAÇÕES",
+    "C/Exercícios C.md",
+    "JAVA/Exercícios Java.md",
+    "JAVA/ANOTAÇÕES TP2/GrafoListaAdj.java.md",
+    "JAVA/ANOTAÇÕES TP2/Grafo.java.md",
+    "JAVA/ANOTAÇÕES TP2",
+    "VHDL/ANOTAÇÕES/7 - SIGNAL.md",
+    "VHDL/ANOTAÇÕES/15 - INSTANCIAÇÃO.md",
+    "VHDL/ANOTAÇÕES/14 - ENABLE.md",
+    "VHDL/ANOTAÇÕES/13 - MÁQUINAS DE ESTADO FINITAS (FSM).md",
+    "VHDL/ANOTAÇÕES/12 - CONTADOR (3 BITS).md",
+    "VHDL/ANOTAÇÕES/11 - FLIP FLOP.md",
+    "VHDL/ANOTAÇÕES/6 - CONDICIONAIS.md",
+    "VHDL/ANOTAÇÕES/16 - TESTBENCH.md",
+    "JAVA/ANOTAÇÕES/4 - THIS, GET e SET.md",
+    "JAVA/ANOTAÇÕES/5 - CONSTRUTORES.md",
+    "JAVA/ANOTAÇÕES/12 - ENUMERAÇÕES.md",
+    "VHDL/ANOTAÇÕES/5 - ARQUITETURA.md",
+    "mesa_tangivel.png",
+    "Captura de tela de 2025-10-15 13-32-01.png",
+    "Sem título.canvas",
+    "Design sem nome.jpg",
+    "Captura de tela de 2025-10-16 15-51-15.png",
+    "Pasted image 20251016155119.png",
+    "PYTHON/ANOTAÇÕES",
+    "VHDL/ANOTAÇÕES",
+    "VHDL",
+    "JAVA/ANOTAÇÕES",
+    "PYTHON",
+    "C",
+    "JAVA",
+    "Captura de tela de 2025-09-02 11-00-16.png"
+  ]
+}
