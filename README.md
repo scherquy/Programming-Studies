@@ -1,1 +1,1 @@
-# Estudos de Engenharia de Computação
+# Estudos de Engenharia de Computação.
