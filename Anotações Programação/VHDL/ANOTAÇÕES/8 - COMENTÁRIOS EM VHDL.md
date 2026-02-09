@@ -1,0 +1,1 @@
+Para fazer comentários basta botar "--" no início dos comentários
