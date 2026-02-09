@@ -1,0 +1,9 @@
+# Ignorar configurações do VS Code
+.vscode/
+
+# Ignorar sua pasta de anotações
+Anotações Programação/
+
+# Ignorar os executáveis de C
+*.exe
+*.o
