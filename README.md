@@ -8,4 +8,4 @@ C, Java, Python
 
 # Ambiente
 
-VS Code / Linux Ubuntu
+VS Code / Linux Ubuntu.
