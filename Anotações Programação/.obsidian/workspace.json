@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VHDL/ANOTAÇÕES/5 - ARQUITETURA.md",
+                "file": "JAVA/ANOTAÇÕES/0 - COMO INTERPRETAR UMA UML EM JAVA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 - ARQUITETURA"
+              "title": "0 - COMO INTERPRETAR UMA UML EM JAVA"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "59cee811a962a604",
   "lastOpenFiles": [
+    "VHDL/ANOTAÇÕES/5 - ARQUITETURA.md",
     "VHDL/ANOTAÇÕES/4 - DEFINIÇÃO DE ENTRADAS E SAÍDAS.md",
     "VHDL/ANOTAÇÕES/3 - OPERADORES EM VHDL.md",
     "VHDL/ANOTAÇÕES/2 - BIBLIOTECAS.md",
@@ -198,7 +199,6 @@
     "JAVA/ANOTAÇÕES/4 - THIS, GET e SET.md",
     "JAVA/ANOTAÇÕES/5 - CONSTRUTORES.md",
     "JAVA/ANOTAÇÕES/12 - ENUMERAÇÕES.md",
-    "VHDL/ANOTAÇÕES/5 - ARQUITETURA.md",
     "mesa_tangivel.png",
     "Captura de tela de 2025-10-15 13-32-01.png",
     "Sem título.canvas",
