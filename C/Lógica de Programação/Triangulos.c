@@ -16,6 +16,8 @@ int main(){
             printf("\nÉ UM TRIÂNGULO EQUILÁTERO!!!\n\n");
         } else if(l1!=l2 && l1!=l3 && l2!=l3){
             printf("\nÉ UM TRIÂNGULO ESCALENO!!!\n\n");
+        } else if((l1 == l2 && l1 != l3) || (l2 == l3 && l2 != l1)){
+            printf("\nÉ UM TRIÂNGULO ISÓSCELES\n\n");
         }
     } else {
         printf("\nCOM ESSES VALORES NÃO É POSSÍVEL FORMAR UM TRIÂNGULO!!!\n\n");
