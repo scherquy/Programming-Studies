@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "author": "scherquy",
+  "editor": "wokwi",
+  "parts": [ { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": 18.6, "attrs": {} } ],
+  "connections": [],
+  "dependencies": {}
+}
+
+//Quando for testar tem que remover esse comentário e mudar o nome para "diagram.json"
