@@ -4,3 +4,8 @@ Anotações\ Programação/
 */.vscode/
 *.exe
 *.o
+target/
+*/target/
+*.class
+hs_err_pid*
+Java/

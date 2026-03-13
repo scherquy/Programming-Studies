@@ -4,7 +4,7 @@ Repositório dedicado para armazenar exercícios da faculdade, cursos e projetos
 
 # Linguagens de programação utilizadas
 
-C, Java, Python
+C, C++, Java, Python
 
 # Ambiente
 
