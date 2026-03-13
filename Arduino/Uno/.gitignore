@@ -5,5 +5,8 @@
 .vscode/ipch
 test/
 include/
-src/
 lib/
+src/
+diagram.json
+platformio.ini
+wokwi.toml
