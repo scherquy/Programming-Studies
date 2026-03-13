@@ -1,0 +1,17 @@
+# Compilados (Pasta de saída do Maven)
+target/
+
+# Arquivos de configuração do NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
