@@ -1,4 +1,5 @@
 #include <LiquidCrystal.h>
+#include <Arduino.h>
 
 void clearPlayer();
 void gameOver();
@@ -17,6 +18,7 @@ void drawPassaro();
 void gerarPassaro();
 void setup();
 void loop();
+void drawScore();
 
 #define JUMP 9
 #define BUZZER 8
@@ -30,10 +32,10 @@ void loop();
 #define PONTOS_VELOCIDADE6 5000
 
 #define CHANCHE_GERACAO_CACTOS 60
-#define TEMPO_GERACAO_CACTOS 1000
+#define TEMPO_GERACAO_CACTOS 2000
 #define ESTILO_CACTO 1
 
-#define CHANCE_GERACAO_PASSAROS_ALTO 30
+#define CHANCE_GERACAO_PASSAROS_ALTO 40
 #define TEMPO_GERACAO_PASSAROS_ALTO 2000
 #define ESTILO_PASSAROS_ALTO_ASA_CIMA 2
 #define ESTILO_PASSAROS_ALTO_ASA_BAIXO 3
@@ -128,10 +130,13 @@ unsigned long lastDrawPassaro = 0;// quando os passaros foram movidos pela ultim
 unsigned long lastGeneratedCacto = 0; // quando o ultimo cacto foi gerado
 unsigned long lastGeneratedPassaro = 0;// quando o ultimo passaro foi gerado
 unsigned long startTime = 0; // quando o jogo começou
+unsigned long lastAsaFlap = 0; // quando a asa foi batida pela ultima vez
 
 int cacto[16]; // Vetor que guarda a posição horizontal de cada cacto na tela
+int cactoEstilo[16];
 int cactoCont = 0; // diz quantos cactos estão aativos
 int passaro[16];
+int passaroEstilo[16];
 int passaroCont = 0;
 
 int velocidadeCacto = 600, velocidadePassaro = 600; //Intervalo entre movimentos dos cactos e passaros em ms
@@ -203,10 +208,19 @@ void drawPlayer(int y, bool clean){ // essa função desenha o dinossauro na lin
 }
 
 void addCacto(){
+
+  for(int x=0; x<passaroCont; x++){ // não gera cacto se tiver passaro perto
+    if(passaro[x] > 8) return;
+  }
+  
+  for(int x=0; x<cactoCont; x++){ // bloqueia se qualquer cacto estiver além da coluna 8
+    if(cacto[x] > 8) return;
+  }
+
   for(int x=0; x<16; x++){
-    if(cacto[x] == -1){ //encontra um slot vazio no array
-      if(x>0 && cacto[x-1] == 14 && velocidadeCacto == 500) break; //evita dois cactos grudados no inicio
-      cacto[x] = 15; // coloca o cacto bem na direita
+    if(cacto[x] == -1){
+      cacto[x] = 15;
+      cactoEstilo[x] = random(1, 4);
       cactoCont++;
       break;
     }
@@ -216,6 +230,7 @@ void addCacto(){
 void clearCacto(){
   for(int x=0; x<16; x++){
     cacto[x] = -1;
+    cactoEstilo[x] = 1;
     cactoCont = 0;
   }
 }
@@ -223,6 +238,7 @@ void clearCacto(){
 void removePrimeiroCacto(){ // remove o cacto mais a esquerda
   for(int x=0; x<16; x++){
     cacto[x] = cacto[x+1]; //desloca todos uma posição para a esquerda
+    cactoEstilo[x] = cactoEstilo[x+1];
     if(x >= cactoCont){
       cacto[x] = -1;
       break;
@@ -249,7 +265,7 @@ void drawCacto(){ //move, desenha e verifica a colisão de todos os cactos
 
     lcd.setCursor(cacto[x], 1);
     if(cacto[x] > -1){
-      lcd.write(ESTILO_CACTO); // desenha o cacto
+      lcd.write(cactoEstilo[x]); // desenha o cacto
     } else{
       removePrimeiroCacto(); //cacto saiu da tela
       x--;
@@ -276,10 +292,18 @@ void gerarCacto(){ //gera cactos aleatoriamente
 }
 
 void addPassaro(){
+  for(int x=0; x<cactoCont; x++){ // não gera passaro se tiver cacto perto
+    if(cacto[x] > 8) return;
+  }
+
+  for(int x=0; x<passaroCont; x++){ // bloqueia se qualquer passaro estiver além da coluna 8
+    if(passaro[x] > 8) return;
+  }
+
   for(int x=0; x<16; x++){
-    if(passaro[x] == -1){ //encontra um slot vazio no array
-      if(x>0 && passaro[x-1] == 14 && velocidadePassaro == 500) break; //evita dois passaros grudados no inicio
-      passaro[x] = 15; // coloca o passaro bem na direita
+    if(passaro[x] == -1){
+      passaro[x] = 15;
+      passaroEstilo[x] = random(4, 6); // sorteia entre slots 4 e 5
       passaroCont++;
       break;
     }
@@ -289,6 +313,7 @@ void addPassaro(){
 void clearPassaro(){
   for(int x=0; x<16; x++){
     passaro[x] = -1;
+    passaroEstilo[x] = 4;
     passaroCont = 0;
   }
 }
@@ -296,6 +321,7 @@ void clearPassaro(){
 void removePrimeiroPassaro(){ // remove o cacto mais a esquerda
   for(int x=0; x<16; x++){
     passaro[x] = passaro[x+1]; //desloca todos uma posição para a esquerda
+    passaroEstilo[x] = passaroEstilo[x+1];
     if(x >= passaroCont){
       passaro[x] = -1;
       break;
@@ -322,7 +348,13 @@ void drawPassaro(){ //move, desenha e verifica a colisão de todos os cactos
 
     lcd.setCursor(passaro[x], 1);
     if(passaro[x] > -1){
-      lcd.write(ESTILO_PASSAROS_ALTO_ASA_BAIXO); // desenha o cacto
+      if(millis() - lastAsaFlap >= 300){
+        lastAsaFlap = millis();
+        for(int y=0; y<passaroCont; y++){
+          passaroEstilo[y] = (passaroEstilo[y] == 4) ? 5 : 4;
+        }
+      }
+      lcd.write(passaroEstilo[x]); // desenha o cacto
     } else{
       removePrimeiroPassaro(); //cacto saiu da tela
       x--;
@@ -377,33 +409,25 @@ void loop(){
       noTone(BUZZER);
     }
 
-    if(digitalRead(JUMP)){
-      if(!jumping){
-        jumpTime = millis();
-        jumping = true;
-        drawPlayer(--dinoY, true);
-        tone(BUZZER, 800);
-      }
-
-      if(jumping){
-        if(millis() - jumpTime > MAX_JUMP_TIME){
-          jumping = false;
-          drawPlayer(++dinoY, true);
-          noTone(BUZZER);
-        }
-      }
-    } else{
-        if(jumping){
-          jumping = false;
-          drawPlayer(++dinoY, true);
-        }
-      }
+    if(digitalRead(JUMP) && !jumping){
+      jumpTime = millis();
+      jumping = true;
+      drawPlayer(--dinoY, true);
+      tone(BUZZER, 800);
+    }
+    
+    if(jumping && millis() - jumpTime > MAX_JUMP_TIME){
+      jumping = false;
+      drawPlayer(++dinoY, true);
+      noTone(BUZZER);
+    }
 
       gerarCacto();
       gerarPassaro();
       drawPlayer(dinoY, false);
       drawCacto();
       drawPassaro();
+      drawScore();
       delay(150);
   } else{
       if(digitalRead(JUMP)){
@@ -414,4 +438,12 @@ void loop(){
         noTone(BUZZER);
       }
     }
+}
+
+void drawScore(){
+  unsigned long score = (millis() - startTime) / 100;
+  lcd.setCursor(13, 0); // canto superior direito
+  if(score < 10) lcd.print("  "); // lugar para números pequenos
+  else if(score < 100) lcd.print(" ");
+  lcd.print(score);
 }
