@@ -1,4 +1,4 @@
-package nota;
+package ifelseswitch;
 
 import java.util.Scanner;
 

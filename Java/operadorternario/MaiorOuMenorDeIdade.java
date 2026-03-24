@@ -1,4 +1,4 @@
-package situacaoidade;
+package operadorternario;
 
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -18,7 +18,7 @@ public class MaiorOuMenorDeIdade {
 
         major = ((age > 18)) ? "MAIOR DE IDADE" : "MENOR DE IDADE";
 
-        System.out.printf("\nIdade: %d", age);
+        System.out.printf("\nIdade: %d anos", age);
         System.out.printf("\n%s\n\n", major);
 
     }

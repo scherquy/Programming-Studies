@@ -1,4 +1,4 @@
-package parouimpar;
+package ifelseswitch;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package calculadoraidade;
+package simplemath;
 
 import java.util.Scanner;
 import java.time.LocalDate;

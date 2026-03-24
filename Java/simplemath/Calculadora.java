@@ -1,4 +1,4 @@
-package supercalculadora;
+package simplemath;
 
 import java.util.Scanner;
 import java.math.*;

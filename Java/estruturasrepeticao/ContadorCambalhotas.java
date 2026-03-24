@@ -1,4 +1,4 @@
-package estruturawhile;
+package estruturasrepeticao;
 
 public class ContadorCambalhotas {
     public static void main(String[] args) {

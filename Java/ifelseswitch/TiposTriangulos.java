@@ -1,4 +1,4 @@
-package tipostriangulos;
+package ifelseswitch;
 
 import java.util.Scanner;
 

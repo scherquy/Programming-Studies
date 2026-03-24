@@ -1,4 +1,4 @@
-package geniodalampada;
+package operadorternario;
 
 import java.util.Scanner;
 import java.math.*;

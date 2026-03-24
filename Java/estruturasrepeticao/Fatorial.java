@@ -1,4 +1,4 @@
-package fatorial;
+package estruturasrepeticao;
 
 public class Fatorial {
     public static void main(String[] args) {

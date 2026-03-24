@@ -1,4 +1,4 @@
-package bhaskara;
+package ifelseswitch;
 
 import java.util.Scanner;
 import java.math.*;

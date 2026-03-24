@@ -1,4 +1,4 @@
-package situacaoparavotar;
+package ifelseswitch;
 
 import java.util.Scanner;
 import java.time.LocalDate;
