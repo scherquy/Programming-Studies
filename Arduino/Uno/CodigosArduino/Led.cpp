@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-int led=10; //Variável definida como 10 para usar a porta 10
+int led=13; //Variável definida como 10 para usar a porta 10
 
 void setup(){
     pinMode(led, OUTPUT); //Definindo o pino do LED como saída

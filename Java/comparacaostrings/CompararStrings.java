@@ -1,4 +1,4 @@
-package compararstrings;
+package comparacaostrings;
 
 public class CompararStrings {
     public static void main(String[] args) {

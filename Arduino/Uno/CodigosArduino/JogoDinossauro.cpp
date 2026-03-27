@@ -1,5 +1,4 @@
 #include <LiquidCrystal.h>
-#include <Arduino.h>
 
 void clearPlayer();
 void gameOver();
