@@ -8,4 +8,4 @@ target/
 */target/
 *.class
 hs_err_pid*
-.obsidian/
+*.obsidian
