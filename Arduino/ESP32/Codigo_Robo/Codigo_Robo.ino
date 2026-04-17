@@ -1,35 +1,39 @@
-// Definição dos pinos conforme sua montagem
+// Definição dos pinos para os dois motores
 const int IN1 = 32; 
 const int IN2 = 33;
+const int IN3 = 27; 
+const int IN4 = 26;
 
 void setup() {
-  // Configura os pinos como saída
+  // Configura todos os pinos como saída
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
   
-  // Garante que o motor comece desligado
+  // Começa com tudo desligado por segurança
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
 }
 
 void loop() {
-  // 1. Gira para um lado (Sentido Horário)
+  // --- ANDAR PARA FRENTE ---
+  // Motor A liga
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
-  delay(2000); // Gira por 2 segundos
+  // Motor B liga
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  
+  delay(3000); // Anda por 3 segundos
 
-  // 2. Para o motor (Freio)
+  // --- PARAR ---
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
-  delay(1000); // Espera 1 segundo
-
-  // 3. Gira para o outro lado (Sentido Anti-horário)
-  digitalWrite(IN1, LOW);
-  digitalWrite(IN2, HIGH);
-  delay(2000); // Gira por 2 segundos
-
-  // 4. Para o motor
-  digitalWrite(IN1, LOW);
-  digitalWrite(IN2, LOW);
-  delay(3000); // Espera 3 segundos antes de recomeçar
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  
+  delay(3000); // Fica parado por 3 segundos
 }
