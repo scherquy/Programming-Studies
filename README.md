@@ -1,6 +1,6 @@
 # Estudos de Engenharia de Computação
 
-Repositório dedicado para armazenar exercícios da faculdade, cursos e projetos
+Repositório dedicado para armazenar exercícios da faculdade e cursos
 
 # Linguagens de programação utilizadas
 
