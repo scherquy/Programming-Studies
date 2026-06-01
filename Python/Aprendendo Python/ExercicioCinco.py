@@ -4,4 +4,4 @@ Imprima, em um único print, o atual ano que você está fazendo esse curso. O v
 Ano atual: [ano]
 '''
 
-print('\nAno atual: ', 2026, '\n')
+print("\nAno atual: ", 2026, "\n")

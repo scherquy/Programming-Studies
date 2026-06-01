@@ -1,3 +1,3 @@
-i = 5.34
+idade = int(input("\nInforme a sua idade: "))
 
-print(type(i))
+print(f"{idade:.2f}", "\n")
