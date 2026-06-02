@@ -4,6 +4,6 @@ Crie um código que solicite uma frase à pessoa usuária e imprima a mesma fras
 
 frase = str(input("\nEscreva uma frase: \n\n"))
 
-frase = frase.replace("e", "f")
+frase = frase.lower().replace("e", "f")
 
 print(f"\n{frase}\n")
