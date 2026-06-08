@@ -1,17 +1,7 @@
-def media(lista):
-  media = sum(lista) / len(lista)
+notas = [6.0, 7.0, 9.0, 5.5, 8.0]
+qualitativo = 0.5
 
-  if media >= 6:
-    situacao = "Aprovado"
-  else:
-    situacao = "Reprovado"
+notaFinal = map(lambda nota: nota + qualitativo, notas)
+notaFinal = list(notaFinal)
 
-  return (media, situacao)
-
-
-
-notas = [5, 5, 6]
-
-media, situacao = media(notas)
-
-print(f"\nA média do aluno é {media:.2f}. Aluno {situacao}\n")
+print(notaFinal)
