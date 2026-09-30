@@ -12,4 +12,4 @@ if idade >= 18 and permissao.upper() == "S":
 elif (idade >= 18 or idade < 18) and permissao.upper() == "N":
     print("\nEntrada negada\n")
 elif idade < 18 and permissao.upper() == "S":
-    print("\nApresente um documento antes de entrar\n") 
+    print("\nApresente um documento antes de entrar\n")

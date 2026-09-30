@@ -8,8 +8,6 @@ telefone = str(input("\nInforme o seu número de telefone [(XX) XXXXX-XXXX]: "))
 
 telefone_format = telefone.strip().replace("(", "").replace(")", "").replace(" ", "").replace("-", "")
 
-print(telefone_format)
-
 if telefone_format.isdigit() == True and len(telefone_format) == 11:
     print(f"\nSeu número de celular {telefone_format} está correto.\n")
 else:
